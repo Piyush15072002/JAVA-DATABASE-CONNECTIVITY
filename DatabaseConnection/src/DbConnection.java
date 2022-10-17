@@ -20,6 +20,13 @@ public class DbConnection {
         // support the TYPE 1 for sql connections so we need to download the SQL Driver
         // separately which is - "com.mysql.jdbc.Driver" which is a type 4
 
+        // download the driver from the MAVEN REPOSITORY, which is a global
+        // repository for all libraries
+
+        // Search for "MySQL Connector Jar" -> MVN Repository -> Download driver
+
+        //
+
         Class.forName("com.mysql.jdbc.Driver"); // forName is a method that helps us to load the class
 
         // Step 3 -
