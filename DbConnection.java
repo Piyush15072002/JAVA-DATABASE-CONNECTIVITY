@@ -25,14 +25,9 @@ public class DbConnection {
 
         // Search for "MySQL Connector Jar" -> MVN Repository -> Download driver
 
-        // After downloading the driver, add it to the "Referenced Libraries" of the
-        // JAVA PROJECT folder
-        // now for VS code, the path to the driver is com.mysql.cj.jdbc.Driver
+        //
 
-        // after doing this, don't run the file manually, it will give errors
-        // Instead, click on the RUN link on top of the main function.
-
-        Class.forName("com.mysql.cj.jdbc.Driver"); // forName is a method that helps us to load the class
+        Class.forName("com.mysql.jdbc.Driver"); // forName is a method that helps us to load the class
 
         // Step 3 -
 
