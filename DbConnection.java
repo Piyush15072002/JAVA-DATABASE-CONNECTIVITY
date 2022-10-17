@@ -20,6 +20,10 @@ public class DbConnection {
         // support the TYPE 1 for sql connections so we need to download the SQL Driver
         // separately which is - "com.mysql.jdbc.Driver" which is a type 4
 
+        Class.forName("com.mysql.jdbc.Driver"); // forName is a method that helps us to load the class
+
+        // Step 3 -
+
     }
 
 }
