@@ -76,11 +76,19 @@ public class DbConnection {
         // The pointer that points on the database, remains on 0 index and since our
         // index starts at 1 in sql table so we need to go up one number using the
         // next() function
-        rs.next();
 
-        String name = rs.getString("name");
+        while (rs.next()) {
 
-        System.out.println(name);
+            int age = rs.getInt("age");
+            String name = rs.getString("name");
+            System.out.println(name + " : " + age);
+        }
+
+        // rs.next();
+
+        // String name = rs.getString("name");
+
+        // System.out.println(name);
 
         // Step 7 - Close connection and statement
 
