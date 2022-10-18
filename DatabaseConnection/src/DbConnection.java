@@ -42,11 +42,22 @@ public class DbConnection {
         // We need to pass 3 things as Parameter
         // Connection URL, Username, Password of MySQL
 
-        String url = "";
+        String url = "jdbc:mysql://localhost:3306/SQLTESTING"; // jdbc:mysql://localhost:3306/SQLTESTING
         String username = "root";
         String password = ""; // blank for no password
 
         Connection con = DriverManager.getConnection(url, username, password);
+
+        // Now go and create your database
+        // CREATE DATABASE SQLTESTING;
+        // USE SQLTESTING;
+        // CREATE TABLE TESTING()
+        // INSERT INTO TESTING (username, password) VALUES ()
+
+        // Step 4 - Create a statement
+        // it is also an interface so the process is same
+
+        Statement st = con.createStatement();
 
     }
 
