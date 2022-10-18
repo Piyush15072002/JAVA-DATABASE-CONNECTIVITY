@@ -54,10 +54,20 @@ public class DbConnection {
         // CREATE TABLE TESTING()
         // INSERT INTO TESTING (username, password) VALUES ()
 
-        // Step 4 - Create a statement
+        // Step 4 - Create a statement using query
         // it is also an interface so the process is same
 
         Statement st = con.createStatement();
+
+        String query = "select * from TESTING where age = 20";
+
+        // Step 5 - Execute the query
+
+        // st.executeQuery(query);
+        // if we just use the above command, it only gets the data
+        // but if we want the structured data, then we use an interface called as
+        // ResultSet
+        st.executeQuery(query);
 
     }
 
