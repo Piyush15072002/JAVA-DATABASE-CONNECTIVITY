@@ -59,7 +59,8 @@ public class DbConnection {
 
         Statement st = con.createStatement();
 
-        String query = "select * from testing where age = 20";
+        String query = "select * from testing";
+        // String query = "insert into testing values('vegeta',30)";
 
         // Step 5 - Execute the query
 
@@ -77,7 +78,7 @@ public class DbConnection {
         // next() function
         rs.next();
 
-        String name = rs.getString("age");
+        String name = rs.getString("name");
 
         System.out.println(name);
 
