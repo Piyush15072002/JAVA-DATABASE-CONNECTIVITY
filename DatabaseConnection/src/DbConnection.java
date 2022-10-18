@@ -42,9 +42,9 @@ public class DbConnection {
         // We need to pass 3 things as Parameter
         // Connection URL, Username, Password of MySQL
 
-        String url = "jdbc:mysql://localhost:3306/SQLTESTING"; // jdbc:mysql://localhost:3306/SQLTESTING
-        String username = "root";
-        String password = ""; // blank for no password
+        String url = "jdbc:mysql://localhost:3306/javacon"; // jdbc:mysql://localhost:3306/SQLTESTING
+        String username = "piyush";
+        String password = "pant"; // blank for no password
 
         Connection con = DriverManager.getConnection(url, username, password);
 
@@ -59,7 +59,7 @@ public class DbConnection {
 
         Statement st = con.createStatement();
 
-        String query = "select * from TESTING where age = 20";
+        String query = "select * from testing where age = 20";
 
         // Step 5 - Execute the query
 
@@ -83,8 +83,8 @@ public class DbConnection {
 
         // Step 7 - Close connection and statement
 
-        st.close();
-        con.close();
+        st.close(); // Closing statement
+        con.close(); // Closing connection
     }
 
 }
