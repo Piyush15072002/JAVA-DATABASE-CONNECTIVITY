@@ -34,7 +34,19 @@ public class DbConnection {
 
         Class.forName("com.mysql.cj.jdbc.Driver"); // forName is a method that helps us to load the class
 
-        // Step 3 -
+        // Step 3 - Create the connection object
+        // to create it, we use an interface called as CONNECTION but as we know that we
+        // cannot create objects from interfaces so we use this function getConnection()
+        // which comes from a class called as DriverManager
+
+        // We need to pass 3 things as Parameter
+        // Connection URL, Username, Password of MySQL
+
+        String url = "";
+        String username = "root";
+        String password = ""; // blank for no password
+
+        Connection con = DriverManager.getConnection(url, username, password);
 
     }
 
