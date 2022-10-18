@@ -52,7 +52,7 @@ public class DbConnection {
         // CREATE DATABASE SQLTESTING;
         // USE SQLTESTING;
         // CREATE TABLE TESTING()
-        // INSERT INTO TESTING (username, password) VALUES ()
+        // INSERT INTO TESTING (name, age) VALUES ()
 
         // Step 4 - Create a statement using query
         // it is also an interface so the process is same
@@ -67,8 +67,24 @@ public class DbConnection {
         // if we just use the above command, it only gets the data
         // but if we want the structured data, then we use an interface called as
         // ResultSet
-        st.executeQuery(query);
 
+        ResultSet rs = st.executeQuery(query);
+
+        // Step 6 - Process the result
+
+        // The pointer that points on the database, remains on 0 index and since our
+        // index starts at 1 in sql table so we need to go up one number using the
+        // next() function
+        rs.next();
+
+        String name = rs.getString("age");
+
+        System.out.println(name);
+
+        // Step 7 - Close connection and statement
+
+        st.close();
+        con.close();
     }
 
 }
